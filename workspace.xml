@@ -3916,7 +3916,7 @@
                                                                         <statement name="ACTIONS">
                                                                           <block type="While">
                                                                             <value name="VALUE-0">
-                                                                              <block type="And">
+                                                                              <block type="And" inline="false">
                                                                                 <value name="VALUE-0">
                                                                                   <block type="GreaterThan">
                                                                                     <value name="VALUE-0">
@@ -4086,6 +4086,215 @@
                                                                                     </value>
                                                                                   </block>
                                                                                 </statement>
+                                                                                <next>
+                                                                                  <block type="ruleBlock">
+                                                                                    <mutation isOnGoingEvent="false"></mutation>
+                                                                                    <field name="NAME">resetCapturePointOnLastPlayerExit</field>
+                                                                                    <field name="EVENTTYPE">OnPlayerExitCapturePoint</field>
+                                                                                    <statement name="CONDITIONS">
+                                                                                      <block type="conditionBlock">
+                                                                                        <value name="CONDITION">
+                                                                                          <block type="GreaterThan">
+                                                                                            <value name="VALUE-0">
+                                                                                              <block type="GetGameModeTimeElapsed"></block>
+                                                                                            </value>
+                                                                                            <value name="VALUE-1">
+                                                                                              <block type="Number">
+                                                                                                <field name="NUM">0</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="conditionBlock">
+                                                                                            <value name="CONDITION">
+                                                                                              <block type="Equals">
+                                                                                                <value name="VALUE-0">
+                                                                                                  <block type="GetPlayersOnPoint">
+                                                                                                    <value name="VALUE-0">
+                                                                                                      <block type="EventCapturePoint"></block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="VALUE-1">
+                                                                                                  <block type="Number">
+                                                                                                    <field name="NUM">0</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                    <statement name="ACTIONS">
+                                                                                      <block type="DisplayCustomNotificationMessage">
+                                                                                        <value name="VALUE-0">
+                                                                                          <block type="Message">
+                                                                                            <value name="VALUE-0">
+                                                                                              <block type="Text">
+                                                                                                <field name="TEXT">Resetting capture point in 2 seconds</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="VALUE-1">
+                                                                                          <block type="CustomMessagesItem">
+                                                                                            <field name="VALUE-0">CustomMessages</field>
+                                                                                            <field name="VALUE-1">HeaderText</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="VALUE-2">
+                                                                                          <block type="Number">
+                                                                                            <field name="NUM">2</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="Wait">
+                                                                                            <value name="VALUE-0">
+                                                                                              <block type="Number">
+                                                                                                <field name="NUM">2</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="subroutineInstanceBlock">
+                                                                                                <field name="SUBROUTINE_NAME">resetEventCapturePoint</field>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                    <next>
+                                                                                      <block type="ruleBlock">
+                                                                                        <mutation isOnGoingEvent="false"></mutation>
+                                                                                        <field name="NAME">resetCapturePointOnLastPlayerExit</field>
+                                                                                        <field name="EVENTTYPE">OnCapturePointCaptured</field>
+                                                                                        <statement name="CONDITIONS">
+                                                                                          <block type="conditionBlock">
+                                                                                            <value name="CONDITION">
+                                                                                              <block type="GreaterThan">
+                                                                                                <value name="VALUE-0">
+                                                                                                  <block type="GetGameModeTimeElapsed"></block>
+                                                                                                </value>
+                                                                                                <value name="VALUE-1">
+                                                                                                  <block type="Number">
+                                                                                                    <field name="NUM">0</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                        <statement name="ACTIONS">
+                                                                                          <block type="DisplayCustomNotificationMessage">
+                                                                                            <value name="VALUE-0">
+                                                                                              <block type="Message">
+                                                                                                <value name="VALUE-0">
+                                                                                                  <block type="Text">
+                                                                                                    <field name="TEXT">Resetting capture point in 2 seconds</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <value name="VALUE-1">
+                                                                                              <block type="CustomMessagesItem">
+                                                                                                <field name="VALUE-0">CustomMessages</field>
+                                                                                                <field name="VALUE-1">HeaderText</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <value name="VALUE-2">
+                                                                                              <block type="Number">
+                                                                                                <field name="NUM">2</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="Wait">
+                                                                                                <value name="VALUE-0">
+                                                                                                  <block type="Number">
+                                                                                                    <field name="NUM">2</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="subroutineInstanceBlock">
+                                                                                                    <field name="SUBROUTINE_NAME">resetEventCapturePoint</field>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                        <next>
+                                                                                          <block type="ruleBlock">
+                                                                                            <mutation isOnGoingEvent="false"></mutation>
+                                                                                            <field name="NAME">resetCapturePointOnLastPlayerExit</field>
+                                                                                            <field name="EVENTTYPE">OnPlayerEnterCapturePoint</field>
+                                                                                            <statement name="CONDITIONS">
+                                                                                              <block type="conditionBlock">
+                                                                                                <value name="CONDITION">
+                                                                                                  <block type="GreaterThan">
+                                                                                                    <value name="VALUE-0">
+                                                                                                      <block type="GetGameModeTimeElapsed"></block>
+                                                                                                    </value>
+                                                                                                    <value name="VALUE-1">
+                                                                                                      <block type="Number">
+                                                                                                        <field name="NUM">0</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="conditionBlock">
+                                                                                                    <value name="CONDITION">
+                                                                                                      <block type="Equals">
+                                                                                                        <value name="VALUE-0">
+                                                                                                          <block type="GetPlayersOnPoint">
+                                                                                                            <value name="VALUE-0">
+                                                                                                              <block type="EventCapturePoint"></block>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="VALUE-1">
+                                                                                                          <block type="Number">
+                                                                                                            <field name="NUM">0</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </statement>
+                                                                                            <statement name="ACTIONS">
+                                                                                              <block type="DisplayCustomNotificationMessage">
+                                                                                                <value name="VALUE-0">
+                                                                                                  <block type="Message">
+                                                                                                    <value name="VALUE-0">
+                                                                                                      <block type="Text">
+                                                                                                        <field name="TEXT">You entered an empty capture point</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="VALUE-1">
+                                                                                                  <block type="CustomMessagesItem">
+                                                                                                    <field name="VALUE-0">CustomMessages</field>
+                                                                                                    <field name="VALUE-1">HeaderText</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="VALUE-2">
+                                                                                                  <block type="Number">
+                                                                                                    <field name="NUM">2</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </statement>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
                                                                               </block>
                                                                             </next>
                                                                           </block>
@@ -4125,7 +4334,7 @@
       </block>
     </statement>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="13700">
+  <block type="subroutineBlock" deletable="false" x="0" y="14610">
     <field name="SUBROUTINE_NAME">summonBot</field>
     <statement name="ACTIONS">
       <block type="SetVariable">
@@ -4416,7 +4625,7 @@
       </block>
     </statement>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="14770">
+  <block type="subroutineBlock" deletable="false" x="0" y="15680">
     <field name="SUBROUTINE_NAME">updateBotPositions</field>
     <statement name="ACTIONS">
       <block type="SetVariable">
@@ -4727,7 +4936,7 @@
       </block>
     </statement>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="15995">
+  <block type="subroutineBlock" deletable="false" x="0" y="16905">
     <field name="SUBROUTINE_NAME">rotateSummonedBots</field>
     <statement name="ACTIONS">
       <block type="SetVariable">
@@ -4802,7 +5011,155 @@
       </block>
     </statement>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="16489">
+  <block type="subroutineBlock" deletable="false" x="0" y="17399">
+    <field name="SUBROUTINE_NAME">resetEventCapturePoint</field>
+    <statement name="ACTIONS">
+      <block type="EnableObjective">
+        <value name="VALUE-0">
+          <block type="EventCapturePoint"></block>
+        </value>
+        <value name="VALUE-1">
+          <block type="Boolean">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="Wait">
+            <value name="VALUE-0">
+              <block type="Number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <next>
+              <block type="EnableObjective">
+                <value name="VALUE-0">
+                  <block type="EventCapturePoint"></block>
+                </value>
+                <value name="VALUE-1">
+                  <block type="Boolean">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="SetCapturePointOwner">
+                    <value name="VALUE-0">
+                      <block type="EventCapturePoint"></block>
+                    </value>
+                    <value name="VALUE-1">
+                      <block type="GetTeamId">
+                        <value name="VALUE-0">
+                          <block type="Number">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="EnableCapturePointSpawning">
+                        <value name="VALUE-0">
+                          <block type="EventCapturePoint"></block>
+                        </value>
+                        <value name="VALUE-1">
+                          <block type="Boolean">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="EnableCapturing">
+                            <value name="VALUE-0">
+                              <block type="EventCapturePoint"></block>
+                            </value>
+                            <value name="VALUE-1">
+                              <block type="Boolean">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="CapturePointCapturingTime">
+                                <value name="VALUE-0">
+                                  <block type="EventCapturePoint"></block>
+                                </value>
+                                <value name="VALUE-1">
+                                  <block type="GetVariable">
+                                    <value name="VALUE-0">
+                                      <block type="variableReferenceBlock">
+                                        <mutation isObjectVar="false"></mutation>
+                                        <field name="OBJECTTYPE">Global</field>
+                                        <field name="VAR" id="w@XE:olPE=d2VIfubh5e" variabletype="Global">captureTime</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="CapturePointNeutralizationTime">
+                                    <value name="VALUE-0">
+                                      <block type="EventCapturePoint"></block>
+                                    </value>
+                                    <value name="VALUE-1">
+                                      <block type="GetVariable">
+                                        <value name="VALUE-0">
+                                          <block type="variableReferenceBlock">
+                                            <mutation isObjectVar="false"></mutation>
+                                            <field name="OBJECTTYPE">Global</field>
+                                            <field name="VAR" id="uKa5RTD/}MLg!9^vD__%" variabletype="Global">neutralizationTime</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="SetNeutralizationMultiplier">
+                                        <value name="VALUE-0">
+                                          <block type="EventCapturePoint"></block>
+                                        </value>
+                                        <value name="VALUE-1">
+                                          <block type="GetVariable">
+                                            <value name="VALUE-0">
+                                              <block type="variableReferenceBlock">
+                                                <mutation isObjectVar="false"></mutation>
+                                                <field name="OBJECTTYPE">Global</field>
+                                                <field name="VAR" id="siWRJ3xB!8^lE:p/Q9{Q" variabletype="Global">captureMultiplier</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="SetMaxCaptureMultiplier">
+                                            <value name="VALUE-0">
+                                              <block type="EventCapturePoint"></block>
+                                            </value>
+                                            <value name="VALUE-1">
+                                              <block type="GetVariable">
+                                                <value name="VALUE-0">
+                                                  <block type="variableReferenceBlock">
+                                                    <mutation isObjectVar="false"></mutation>
+                                                    <field name="OBJECTTYPE">Global</field>
+                                                    <field name="VAR" id="siWRJ3xB!8^lE:p/Q9{Q" variabletype="Global">captureMultiplier</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="subroutineBlock" deletable="false" x="0" y="18164">
     <field name="SUBROUTINE_NAME">removeAssignedBots</field>
     <statement name="ACTIONS">
       <block type="ForVariable">
