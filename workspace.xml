@@ -4110,9 +4110,13 @@
                                                                                             <value name="CONDITION">
                                                                                               <block type="Equals">
                                                                                                 <value name="VALUE-0">
-                                                                                                  <block type="GetPlayersOnPoint">
+                                                                                                  <block type="CountOf">
                                                                                                     <value name="VALUE-0">
-                                                                                                      <block type="EventCapturePoint"></block>
+                                                                                                      <block type="GetPlayersOnPoint">
+                                                                                                        <value name="VALUE-0">
+                                                                                                          <block type="EventCapturePoint"></block>
+                                                                                                        </value>
+                                                                                                      </block>
                                                                                                     </value>
                                                                                                   </block>
                                                                                                 </value>
@@ -4248,9 +4252,13 @@
                                                                                                     <value name="CONDITION">
                                                                                                       <block type="Equals">
                                                                                                         <value name="VALUE-0">
-                                                                                                          <block type="GetPlayersOnPoint">
+                                                                                                          <block type="CountOf">
                                                                                                             <value name="VALUE-0">
-                                                                                                              <block type="EventCapturePoint"></block>
+                                                                                                              <block type="GetPlayersOnPoint">
+                                                                                                                <value name="VALUE-0">
+                                                                                                                  <block type="EventCapturePoint"></block>
+                                                                                                                </value>
+                                                                                                              </block>
                                                                                                             </value>
                                                                                                           </block>
                                                                                                         </value>
