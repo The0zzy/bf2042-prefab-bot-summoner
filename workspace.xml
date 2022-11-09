@@ -4968,10 +4968,9 @@
                                                                                         </statement>
                                                                                         <next>
                                                                                           <block type="ruleBlock">
-                                                                                            <mutation isOnGoingEvent="true"></mutation>
-                                                                                            <field name="NAME">New Rule</field>
-                                                                                            <field name="EVENTTYPE">Ongoing</field>
-                                                                                            <field name="OBJECTTYPE">CapturePoint</field>
+                                                                                            <mutation isOnGoingEvent="false"></mutation>
+                                                                                            <field name="NAME">adjustCaptureTime</field>
+                                                                                            <field name="EVENTTYPE">OnCapturePointCapturing</field>
                                                                                             <statement name="CONDITIONS">
                                                                                               <block type="conditionBlock">
                                                                                                 <value name="CONDITION">
