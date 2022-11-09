@@ -5497,7 +5497,7 @@
                       <block type="Message">
                         <value name="VALUE-0">
                           <block type="Text">
-                            <field name="TEXT">Adapted capture time to {}s for {} players</field>
+                            <field name="TEXT">DEBUG: Adapted capture time to {}s for {} players</field>
                           </block>
                         </value>
                         <value name="VALUE-1">
@@ -5648,7 +5648,7 @@
                       <block type="Message">
                         <value name="VALUE-0">
                           <block type="Text">
-                            <field name="TEXT">Adapted capture time to {}s for {} players</field>
+                            <field name="TEXT">DEBUG: Adapted capture time to {}s for {} players</field>
                           </block>
                         </value>
                         <value name="VALUE-1">
@@ -5673,7 +5673,7 @@
                                 </value>
                                 <value name="VALUE-1">
                                   <block type="Number">
-                                    <field name="NUM">0.83</field>
+                                    <field name="NUM">0.65</field>
                                   </block>
                                 </value>
                               </block>
@@ -5799,7 +5799,7 @@
                       <block type="Message">
                         <value name="VALUE-0">
                           <block type="Text">
-                            <field name="TEXT">Adapted capture time to {}s for {} players</field>
+                            <field name="TEXT">DEBUG: Adapted capture time to {}s for {} players</field>
                           </block>
                         </value>
                         <value name="VALUE-1">
@@ -5824,7 +5824,7 @@
                                 </value>
                                 <value name="VALUE-1">
                                   <block type="Number">
-                                    <field name="NUM">0.83</field>
+                                    <field name="NUM">0.42</field>
                                   </block>
                                 </value>
                               </block>
@@ -5950,7 +5950,7 @@
                       <block type="Message">
                         <value name="VALUE-0">
                           <block type="Text">
-                            <field name="TEXT">Adapted capture time to {}s for {} players</field>
+                            <field name="TEXT">DEBUG: Adapted capture time to {}s for {} players</field>
                           </block>
                         </value>
                         <value name="VALUE-1">
@@ -5975,7 +5975,7 @@
                                 </value>
                                 <value name="VALUE-1">
                                   <block type="Number">
-                                    <field name="NUM">0.83</field>
+                                    <field name="NUM">0.28</field>
                                   </block>
                                 </value>
                               </block>
@@ -6060,7 +6060,7 @@
                       <block type="Message">
                         <value name="VALUE-0">
                           <block type="Text">
-                            <field name="TEXT">Adapted capture time to {}s for {} players</field>
+                            <field name="TEXT">DEBUG: Adapted capture time to {}s for {} players</field>
                           </block>
                         </value>
                         <value name="VALUE-1">
