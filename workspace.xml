@@ -1792,6 +1792,68 @@
                                                                                                                         </statement>
                                                                                                                       </block>
                                                                                                                     </statement>
+                                                                                                                    <next>
+                                                                                                                      <block type="ForVariable">
+                                                                                                                        <value name="VALUE-0">
+                                                                                                                          <block type="variableReferenceBlock">
+                                                                                                                            <mutation isObjectVar="false"></mutation>
+                                                                                                                            <field name="OBJECTTYPE">Global</field>
+                                                                                                                            <field name="VAR" id="*W%r~*mvj3]us%;,iqZ^" variabletype="Global">iterator</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="VALUE-1">
+                                                                                                                          <block type="Number">
+                                                                                                                            <field name="NUM">0</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="VALUE-2">
+                                                                                                                          <block type="CountOf">
+                                                                                                                            <value name="VALUE-0">
+                                                                                                                              <block type="AllCapturePoints"></block>
+                                                                                                                            </value>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="VALUE-3">
+                                                                                                                          <block type="Number">
+                                                                                                                            <field name="NUM">1</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <statement name="DO">
+                                                                                                                          <block type="SetVariable">
+                                                                                                                            <value name="VALUE-0">
+                                                                                                                              <block type="variableReferenceBlock">
+                                                                                                                                <mutation isObjectVar="true"></mutation>
+                                                                                                                                <field name="OBJECTTYPE">CapturePoint</field>
+                                                                                                                                <field name="VAR" id="zhD`wjf}TLg6l{`qkX|C" variabletype="CapturePoint">playersOnPoint</field>
+                                                                                                                                <value name="OBJECT">
+                                                                                                                                  <block type="ValueInArray">
+                                                                                                                                    <value name="VALUE-0">
+                                                                                                                                      <block type="AllCapturePoints"></block>
+                                                                                                                                    </value>
+                                                                                                                                    <value name="VALUE-1">
+                                                                                                                                      <block type="GetVariable">
+                                                                                                                                        <value name="VALUE-0">
+                                                                                                                                          <block type="variableReferenceBlock">
+                                                                                                                                            <mutation isObjectVar="false"></mutation>
+                                                                                                                                            <field name="OBJECTTYPE">Global</field>
+                                                                                                                                            <field name="VAR" id="*W%r~*mvj3]us%;,iqZ^" variabletype="Global">iterator</field>
+                                                                                                                                          </block>
+                                                                                                                                        </value>
+                                                                                                                                      </block>
+                                                                                                                                    </value>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                            <value name="VALUE-1">
+                                                                                                                              <block type="Number">
+                                                                                                                                <field name="NUM">0</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                          </block>
+                                                                                                                        </statement>
+                                                                                                                      </block>
+                                                                                                                    </next>
                                                                                                                   </block>
                                                                                                                 </next>
                                                                                                               </block>
@@ -5255,7 +5317,7 @@
       </block>
     </statement>
   </block>
-  <block type="IsTrueForAll" x="0" y="17740">
+  <block type="IsTrueForAll" x="0" y="17903">
     <value name="VALUE-0">
       <block type="GetPlayersOnPoint">
         <value name="VALUE-0">
@@ -5277,7 +5339,7 @@
       </block>
     </value>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="17844">
+  <block type="subroutineBlock" deletable="false" x="0" y="18007">
     <field name="SUBROUTINE_NAME">adjustCaptureTime</field>
     <statement name="ACTIONS">
       <block type="SetVariable">
@@ -5378,9 +5440,12 @@
                   <block type="GetVariable">
                     <value name="VALUE-0">
                       <block type="variableReferenceBlock">
-                        <mutation isObjectVar="false"></mutation>
-                        <field name="OBJECTTYPE">Global</field>
-                        <field name="VAR" id="v?g+se2_:,fSu~ML}tCO" variabletype="Global">tmpPlayersOnPoint</field>
+                        <mutation isObjectVar="true"></mutation>
+                        <field name="OBJECTTYPE">CapturePoint</field>
+                        <field name="VAR" id="zhD`wjf}TLg6l{`qkX|C" variabletype="CapturePoint">playersOnPoint</field>
+                        <value name="OBJECT">
+                          <block type="EventCapturePoint"></block>
+                        </value>
                       </block>
                     </value>
                   </block>
@@ -5470,9 +5535,12 @@
                   <block type="GetVariable">
                     <value name="VALUE-0">
                       <block type="variableReferenceBlock">
-                        <mutation isObjectVar="false"></mutation>
-                        <field name="OBJECTTYPE">Global</field>
-                        <field name="VAR" id="v?g+se2_:,fSu~ML}tCO" variabletype="Global">tmpPlayersOnPoint</field>
+                        <mutation isObjectVar="true"></mutation>
+                        <field name="OBJECTTYPE">CapturePoint</field>
+                        <field name="VAR" id="zhD`wjf}TLg6l{`qkX|C" variabletype="CapturePoint">playersOnPoint</field>
+                        <value name="OBJECT">
+                          <block type="EventCapturePoint"></block>
+                        </value>
                       </block>
                     </value>
                   </block>
@@ -5562,9 +5630,12 @@
                   <block type="GetVariable">
                     <value name="VALUE-0">
                       <block type="variableReferenceBlock">
-                        <mutation isObjectVar="false"></mutation>
-                        <field name="OBJECTTYPE">Global</field>
-                        <field name="VAR" id="v?g+se2_:,fSu~ML}tCO" variabletype="Global">tmpPlayersOnPoint</field>
+                        <mutation isObjectVar="true"></mutation>
+                        <field name="OBJECTTYPE">CapturePoint</field>
+                        <field name="VAR" id="zhD`wjf}TLg6l{`qkX|C" variabletype="CapturePoint">playersOnPoint</field>
+                        <value name="OBJECT">
+                          <block type="EventCapturePoint"></block>
+                        </value>
                       </block>
                     </value>
                   </block>
@@ -5654,9 +5725,12 @@
                   <block type="GetVariable">
                     <value name="VALUE-0">
                       <block type="variableReferenceBlock">
-                        <mutation isObjectVar="false"></mutation>
-                        <field name="OBJECTTYPE">Global</field>
-                        <field name="VAR" id="v?g+se2_:,fSu~ML}tCO" variabletype="Global">tmpPlayersOnPoint</field>
+                        <mutation isObjectVar="true"></mutation>
+                        <field name="OBJECTTYPE">CapturePoint</field>
+                        <field name="VAR" id="zhD`wjf}TLg6l{`qkX|C" variabletype="CapturePoint">playersOnPoint</field>
+                        <value name="OBJECT">
+                          <block type="EventCapturePoint"></block>
+                        </value>
                       </block>
                     </value>
                   </block>
@@ -5781,7 +5855,7 @@
       </block>
     </statement>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="19468">
+  <block type="subroutineBlock" deletable="false" x="0" y="19663">
     <field name="SUBROUTINE_NAME">trackCaptureTime</field>
     <statement name="ACTIONS">
       <block type="SetVariable">
@@ -7088,7 +7162,7 @@
       </block>
     </statement>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="23651">
+  <block type="subroutineBlock" deletable="false" x="0" y="23846">
     <field name="SUBROUTINE_NAME">summonBot</field>
     <statement name="ACTIONS">
       <block type="SetVariable">
@@ -7379,7 +7453,7 @@
       </block>
     </statement>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="24721">
+  <block type="subroutineBlock" deletable="false" x="0" y="24916">
     <field name="SUBROUTINE_NAME">updateBotPositions</field>
     <statement name="ACTIONS">
       <block type="DisplayCustomNotificationMessage">
@@ -7735,7 +7809,7 @@
       </block>
     </statement>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="26029">
+  <block type="subroutineBlock" deletable="false" x="0" y="26224">
     <field name="SUBROUTINE_NAME">rotateSummonedBots</field>
     <statement name="ACTIONS">
       <block type="SetVariable">
@@ -7810,7 +7884,7 @@
       </block>
     </statement>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="26523">
+  <block type="subroutineBlock" deletable="false" x="0" y="26718">
     <field name="SUBROUTINE_NAME">resetEventCapturePoint</field>
     <statement name="ACTIONS">
       <block type="EnableObjective">
@@ -7958,7 +8032,7 @@
       </block>
     </statement>
   </block>
-  <block type="subroutineBlock" deletable="false" x="0" y="27288">
+  <block type="subroutineBlock" deletable="false" x="0" y="27483">
     <field name="SUBROUTINE_NAME">removeAssignedBots</field>
     <statement name="ACTIONS">
       <block type="ForVariable">
